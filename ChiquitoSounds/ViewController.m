@@ -7,16 +7,19 @@
 //
 
 #import "ViewController.h"
-#import <AVFoundation/AVFoundation.h>
-#import <AudioToolBox/AudioToolBox.h>
+
+#import "DeviceHardwareHelper.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "ImagePull.h"
+#import "SoundEffect.h"
 
-
-@interface ViewController () <AVAudioPlayerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate,SoundEffectDelegate>
 @property (nonatomic,strong) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenFondo;
-@property (nonatomic, strong) AVAudioPlayer *player;
 @property (nonatomic,strong) NSArray *images;
+@property (nonatomic,strong) ImagePull *pool;
+@property (nonatomic,strong) SoundEffect *effect;
+@property (nonatomic,strong) IBOutlet DeviceHardwareHelper *deviceHelper;
 @end
 
 @implementation ViewController
@@ -25,12 +28,22 @@
 {
     [super viewDidLoad];
     
+    self.pool = [[ImagePull alloc]initWithFileName:@"ImagenesChiquito"];
+    self.effect = [[SoundEffect alloc]init];
+    __weak typeof (self) weakSelf = self;
+    [self.deviceHelper onProximityEventApproachDoThis:^{
+        [weakSelf.effect play:@"Muelas"];
+    
+    }];
+    [self.deviceHelper onProximityEventLeavingDoThis:^{
+        [self.effect play:@"Trigo"];
+    }];
+    
     [self timer];
     
     [self apagar];
     
-    self.player.delegate =self;
-    
+    self.effect.delegate = self;
     self.motionManager = [[CMMotionManager alloc] init];
     if (self.motionManager.accelerometerAvailable) {
 
@@ -44,24 +57,15 @@
                                                      [self cantaChiquito];
                                                  }
                                              }];
-    
-        UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(useCameraRoll:)];
-        [left setDirection:UISwipeGestureRecognizerDirectionLeft];
-        [self.view addGestureRecognizer:left];
-        
-        UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(useCamera:)];
-        [right setDirection:UISwipeGestureRecognizerDirectionRight];
-        [self.view addGestureRecognizer:right];
     }
-	
+    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(useCameraRoll:)];
+    [left setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.imagenFondo addGestureRecognizer:left];
     
+    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(useCamera:)];
+    [right setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.imagenFondo addGestureRecognizer:right];
 }
-
-
-
-
-
-
 
 
 - (void) useCamera:(id)sender
@@ -101,8 +105,6 @@
     }
 }
 
-
-
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -119,17 +121,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
    
 }
 
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    [self bombillaOFF];
-}
-
-
-
-
-
-
-
-
 -(void)apagar{
     UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(callaChiquito)];
     doubleTapRecognizer.numberOfTapsRequired=2;
@@ -137,26 +128,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
 }
 
--(NSArray *)images{
-    if (!_images) {
-        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ImagenesChiquito" ofType:@"plist"];
-        _images = [[NSArray alloc]initWithContentsOfFile:filePath];
-    }
-    return _images;
-}
-
 -(BOOL)canBecomeFirstResponder{
     return YES;
 }
 
--(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    if (motion==UIEventSubtypeMotionShake) {
-        int x= arc4random() % self.images.count;
-        NSLog(@"🐻");
-        NSString *imag = [self.images objectAtIndex:x];
-        self.imagenFondo.image = [UIImage imageNamed:imag];
-    }
-}
+
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -179,35 +155,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     return _timer;
 }
 
--(void)bombillaON{
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeVideo];
-    [device lockForConfiguration:nil];
-    [device setTorchMode: AVCaptureTorchModeOn];
-    [device unlockForConfiguration];
-}
 
--(void)bombillaOFF{
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType: AVMediaTypeVideo];
-    [device lockForConfiguration:nil];
-    [device setTorchMode: AVCaptureTorchModeOff];
-    [device unlockForConfiguration];
-}
 
 -(void)cantaChiquito{
     NSLog(@"chiquito");
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Trigo"ofType:@"wav"];
-    NSError *err = nil;
-    NSData *soundData = [[NSData alloc] initWithContentsOfFile:filePath options:NSDataReadingMapped error:&err];
-    
-    AVAudioPlayer *p = [[AVAudioPlayer alloc] initWithData:soundData error:&err];
-    self.player = p;
-    self.player.numberOfLoops = 0;
-    [self.player play];
-    [self bombillaON];
-    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
-    
-    
+    [self.effect play:@"Trigo"];
+    [DeviceHardwareHelper vibrate];
+    [DeviceHardwareHelper torchOn];
 }
 
 -(void) callaChiquito{
@@ -219,6 +173,19 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion==UIEventSubtypeMotionShake) {
+        NSLog(@"🐻");
+        UIImage *img = [self.pool nextImage];
+        self.imagenFondo.image = img;
+    }
+}
+
+-(void) soundEffectDidFinishPlaying:(SoundEffect *)soundEffect{
+    NSLog(@"giggigigi");
 }
 
 @end

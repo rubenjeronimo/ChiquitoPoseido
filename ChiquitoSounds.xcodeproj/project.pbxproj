@@ -29,6 +29,9 @@
 		FE3915AE196D4A6900DA1A6A /* cunao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE3915AB196D4A6900DA1A6A /* cunao.mp3 */; };
 		FE3915AF196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */; };
 		FE3915B1196D4BDF00DA1A6A /* ImagenesChiquito.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE3915B0196D4BDF00DA1A6A /* ImagenesChiquito.plist */; };
+		FE3915B5196D7E6F00DA1A6A /* ImagePull.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3915B4196D7E6F00DA1A6A /* ImagePull.m */; };
+		FE3915BA196D879700DA1A6A /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3915B9196D879700DA1A6A /* SoundEffect.m */; };
+		FE3915BD196D945700DA1A6A /* DeviceHardwareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3915BC196D945700DA1A6A /* DeviceHardwareHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,12 @@
 		FE3915AB196D4A6900DA1A6A /* cunao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cunao.mp3; sourceTree = "<group>"; };
 		FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg"; sourceTree = "<group>"; };
 		FE3915B0196D4BDF00DA1A6A /* ImagenesChiquito.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagenesChiquito.plist; sourceTree = "<group>"; };
+		FE3915B3196D7E6F00DA1A6A /* ImagePull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePull.h; sourceTree = "<group>"; };
+		FE3915B4196D7E6F00DA1A6A /* ImagePull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePull.m; sourceTree = "<group>"; };
+		FE3915B8196D879700DA1A6A /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
+		FE3915B9196D879700DA1A6A /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
+		FE3915BB196D945700DA1A6A /* DeviceHardwareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceHardwareHelper.h; sourceTree = "<group>"; };
+		FE3915BC196D945700DA1A6A /* DeviceHardwareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceHardwareHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +139,9 @@
 		FE391573196D27E800DA1A6A /* ChiquitoSounds */ = {
 			isa = PBXGroup;
 			children = (
-				FE3915AA196D4A6900DA1A6A /* 157089.jpg */,
-				FE3915AB196D4A6900DA1A6A /* cunao.mp3 */,
-				FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */,
-				FE3915A4196D2A4000DA1A6A /* Muelas.wav */,
-				FE3915A5196D2A4000DA1A6A /* Trigo.wav */,
-				FE3915A2196D288200DA1A6A /* images.jpg */,
+				FE3915B7196D7EB100DA1A6A /* view */,
+				FE3915B6196D7EAC00DA1A6A /* model */,
+				FE3915B2196D7BEE00DA1A6A /* artwork */,
 				FE39157C196D27E800DA1A6A /* AppDelegate.h */,
 				FE39157D196D27E800DA1A6A /* AppDelegate.m */,
 				FE39157F196D27E800DA1A6A /* Main.storyboard */,
@@ -144,6 +150,12 @@
 				FE391585196D27E800DA1A6A /* Images.xcassets */,
 				FE391574196D27E800DA1A6A /* Supporting Files */,
 				FE3915B0196D4BDF00DA1A6A /* ImagenesChiquito.plist */,
+				FE3915B3196D7E6F00DA1A6A /* ImagePull.h */,
+				FE3915B4196D7E6F00DA1A6A /* ImagePull.m */,
+				FE3915B8196D879700DA1A6A /* SoundEffect.h */,
+				FE3915B9196D879700DA1A6A /* SoundEffect.m */,
+				FE3915BB196D945700DA1A6A /* DeviceHardwareHelper.h */,
+				FE3915BC196D945700DA1A6A /* DeviceHardwareHelper.m */,
 			);
 			path = ChiquitoSounds;
 			sourceTree = "<group>";
@@ -175,6 +187,33 @@
 				FE391595196D27E800DA1A6A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE3915B2196D7BEE00DA1A6A /* artwork */ = {
+			isa = PBXGroup;
+			children = (
+				FE3915AA196D4A6900DA1A6A /* 157089.jpg */,
+				FE3915AB196D4A6900DA1A6A /* cunao.mp3 */,
+				FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */,
+				FE3915A4196D2A4000DA1A6A /* Muelas.wav */,
+				FE3915A5196D2A4000DA1A6A /* Trigo.wav */,
+				FE3915A2196D288200DA1A6A /* images.jpg */,
+			);
+			name = artwork;
+			sourceTree = "<group>";
+		};
+		FE3915B6196D7EAC00DA1A6A /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		FE3915B7196D7EB100DA1A6A /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3915BA196D879700DA1A6A /* SoundEffect.m in Sources */,
+				FE3915BD196D945700DA1A6A /* DeviceHardwareHelper.m in Sources */,
 				FE391584196D27E800DA1A6A /* ViewController.m in Sources */,
 				FE39157E196D27E800DA1A6A /* AppDelegate.m in Sources */,
+				FE3915B5196D7E6F00DA1A6A /* ImagePull.m in Sources */,
 				FE39157A196D27E800DA1A6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
