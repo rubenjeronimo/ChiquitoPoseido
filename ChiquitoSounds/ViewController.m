@@ -31,26 +31,24 @@
     
     self.player.delegate =self;
     
+    self.motionManager = [[CMMotionManager alloc] init];
+    if (self.motionManager.accelerometerAvailable) {
+
+    self.motionManager.accelerometerUpdateInterval = .2;
+    self.motionManager.gyroUpdateInterval = .2;
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
                                              withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
-                                                 [self outputAccelertionData:accelerometerData.acceleration];
-                                                 if(error){
-                                                     
-                                                     NSLog(@"%@", error);
+                                                 if (fabs (accelerometerData.acceleration.z>0.9 && accelerometerData.acceleration.x<0.1 && accelerometerData.acceleration.y<0.1)) {
+                                                     [self callaChiquito];
+                                                 }else if (fabs(accelerometerData.acceleration.y>0.9 && accelerometerData.acceleration.x<0.1 && accelerometerData.acceleration.z<0.1)){
+                                                     [self cantaChiquito];
                                                  }
                                              }];
-
-	// Do any additional setup after loading the view, typically from a nib.
-    
-}
-
--(void)outputAccelertionData:(CMAcceleration)acceleration
-{
-    
-    if (acceleration.z>0.9 && acceleration.x<0.1 && acceleration.y<0.1) {
-        [self callaChiquito];
     }
+	
 }
+
+
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
     [self bombillaOFF];
