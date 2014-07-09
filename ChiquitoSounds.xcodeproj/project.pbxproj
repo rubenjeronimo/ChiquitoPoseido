@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE39156E196D27E800DA1A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39156D196D27E800DA1A6A /* Foundation.framework */; };
+		FE391570196D27E800DA1A6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39156F196D27E800DA1A6A /* CoreGraphics.framework */; };
+		FE391572196D27E800DA1A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE391571196D27E800DA1A6A /* UIKit.framework */; };
+		FE391578196D27E800DA1A6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE391576196D27E800DA1A6A /* InfoPlist.strings */; };
+		FE39157A196D27E800DA1A6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391579196D27E800DA1A6A /* main.m */; };
+		FE39157E196D27E800DA1A6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE39157D196D27E800DA1A6A /* AppDelegate.m */; };
+		FE391581196D27E800DA1A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE39157F196D27E800DA1A6A /* Main.storyboard */; };
+		FE391584196D27E800DA1A6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391583196D27E800DA1A6A /* ViewController.m */; };
+		FE391586196D27E800DA1A6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE391585196D27E800DA1A6A /* Images.xcassets */; };
+		FE39158D196D27E800DA1A6A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39158C196D27E800DA1A6A /* XCTest.framework */; };
+		FE39158E196D27E800DA1A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39156D196D27E800DA1A6A /* Foundation.framework */; };
+		FE39158F196D27E800DA1A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE391571196D27E800DA1A6A /* UIKit.framework */; };
+		FE391597196D27E800DA1A6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE391595196D27E800DA1A6A /* InfoPlist.strings */; };
+		FE391599196D27E800DA1A6A /* ChiquitoSoundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391598196D27E800DA1A6A /* ChiquitoSoundsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE391590196D27E800DA1A6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE391562196D27E800DA1A6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE391569196D27E800DA1A6A;
+			remoteInfo = ChiquitoSounds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE39156A196D27E800DA1A6A /* ChiquitoSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiquitoSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE39156D196D27E800DA1A6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE39156F196D27E800DA1A6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE391571196D27E800DA1A6A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE391575196D27E800DA1A6A /* ChiquitoSounds-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChiquitoSounds-Info.plist"; sourceTree = "<group>"; };
+		FE391577196D27E800DA1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE391579196D27E800DA1A6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE39157B196D27E800DA1A6A /* ChiquitoSounds-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChiquitoSounds-Prefix.pch"; sourceTree = "<group>"; };
+		FE39157C196D27E800DA1A6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE39157D196D27E800DA1A6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE391580196D27E800DA1A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE391582196D27E800DA1A6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE391583196D27E800DA1A6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE391585196D27E800DA1A6A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE39158B196D27E800DA1A6A /* ChiquitoSoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChiquitoSoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE39158C196D27E800DA1A6A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE391594196D27E800DA1A6A /* ChiquitoSoundsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChiquitoSoundsTests-Info.plist"; sourceTree = "<group>"; };
+		FE391596196D27E800DA1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE391598196D27E800DA1A6A /* ChiquitoSoundsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChiquitoSoundsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE391567196D27E800DA1A6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE391570196D27E800DA1A6A /* CoreGraphics.framework in Frameworks */,
+				FE391572196D27E800DA1A6A /* UIKit.framework in Frameworks */,
+				FE39156E196D27E800DA1A6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE391588196D27E800DA1A6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE39158D196D27E800DA1A6A /* XCTest.framework in Frameworks */,
+				FE39158F196D27E800DA1A6A /* UIKit.framework in Frameworks */,
+				FE39158E196D27E800DA1A6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE391561196D27E800DA1A6A = {
+			isa = PBXGroup;
+			children = (
+				FE391573196D27E800DA1A6A /* ChiquitoSounds */,
+				FE391592196D27E800DA1A6A /* ChiquitoSoundsTests */,
+				FE39156C196D27E800DA1A6A /* Frameworks */,
+				FE39156B196D27E800DA1A6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE39156B196D27E800DA1A6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE39156A196D27E800DA1A6A /* ChiquitoSounds.app */,
+				FE39158B196D27E800DA1A6A /* ChiquitoSoundsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE39156C196D27E800DA1A6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE39156D196D27E800DA1A6A /* Foundation.framework */,
+				FE39156F196D27E800DA1A6A /* CoreGraphics.framework */,
+				FE391571196D27E800DA1A6A /* UIKit.framework */,
+				FE39158C196D27E800DA1A6A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE391573196D27E800DA1A6A /* ChiquitoSounds */ = {
+			isa = PBXGroup;
+			children = (
+				FE39157C196D27E800DA1A6A /* AppDelegate.h */,
+				FE39157D196D27E800DA1A6A /* AppDelegate.m */,
+				FE39157F196D27E800DA1A6A /* Main.storyboard */,
+				FE391582196D27E800DA1A6A /* ViewController.h */,
+				FE391583196D27E800DA1A6A /* ViewController.m */,
+				FE391585196D27E800DA1A6A /* Images.xcassets */,
+				FE391574196D27E800DA1A6A /* Supporting Files */,
+			);
+			path = ChiquitoSounds;
+			sourceTree = "<group>";
+		};
+		FE391574196D27E800DA1A6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE391575196D27E800DA1A6A /* ChiquitoSounds-Info.plist */,
+				FE391576196D27E800DA1A6A /* InfoPlist.strings */,
+				FE391579196D27E800DA1A6A /* main.m */,
+				FE39157B196D27E800DA1A6A /* ChiquitoSounds-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE391592196D27E800DA1A6A /* ChiquitoSoundsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE391598196D27E800DA1A6A /* ChiquitoSoundsTests.m */,
+				FE391593196D27E800DA1A6A /* Supporting Files */,
+			);
+			path = ChiquitoSoundsTests;
+			sourceTree = "<group>";
+		};
+		FE391593196D27E800DA1A6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE391594196D27E800DA1A6A /* ChiquitoSoundsTests-Info.plist */,
+				FE391595196D27E800DA1A6A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE391569196D27E800DA1A6A /* ChiquitoSounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE39159C196D27E800DA1A6A /* Build configuration list for PBXNativeTarget "ChiquitoSounds" */;
+			buildPhases = (
+				FE391566196D27E800DA1A6A /* Sources */,
+				FE391567196D27E800DA1A6A /* Frameworks */,
+				FE391568196D27E800DA1A6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChiquitoSounds;
+			productName = ChiquitoSounds;
+			productReference = FE39156A196D27E800DA1A6A /* ChiquitoSounds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE39158A196D27E800DA1A6A /* ChiquitoSoundsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE39159F196D27E800DA1A6A /* Build configuration list for PBXNativeTarget "ChiquitoSoundsTests" */;
+			buildPhases = (
+				FE391587196D27E800DA1A6A /* Sources */,
+				FE391588196D27E800DA1A6A /* Frameworks */,
+				FE391589196D27E800DA1A6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE391591196D27E800DA1A6A /* PBXTargetDependency */,
+			);
+			name = ChiquitoSoundsTests;
+			productName = ChiquitoSoundsTests;
+			productReference = FE39158B196D27E800DA1A6A /* ChiquitoSoundsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE391562196D27E800DA1A6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = IronHack;
+				TargetAttributes = {
+					FE39158A196D27E800DA1A6A = {
+						TestTargetID = FE391569196D27E800DA1A6A;
+					};
+				};
+			};
+			buildConfigurationList = FE391565196D27E800DA1A6A /* Build configuration list for PBXProject "ChiquitoSounds" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE391561196D27E800DA1A6A;
+			productRefGroup = FE39156B196D27E800DA1A6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE391569196D27E800DA1A6A /* ChiquitoSounds */,
+				FE39158A196D27E800DA1A6A /* ChiquitoSoundsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE391568196D27E800DA1A6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE391586196D27E800DA1A6A /* Images.xcassets in Resources */,
+				FE391578196D27E800DA1A6A /* InfoPlist.strings in Resources */,
+				FE391581196D27E800DA1A6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE391589196D27E800DA1A6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE391597196D27E800DA1A6A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE391566196D27E800DA1A6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE391584196D27E800DA1A6A /* ViewController.m in Sources */,
+				FE39157E196D27E800DA1A6A /* AppDelegate.m in Sources */,
+				FE39157A196D27E800DA1A6A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE391587196D27E800DA1A6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE391599196D27E800DA1A6A /* ChiquitoSoundsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE391591196D27E800DA1A6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE391569196D27E800DA1A6A /* ChiquitoSounds */;
+			targetProxy = FE391590196D27E800DA1A6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE391576196D27E800DA1A6A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE391577196D27E800DA1A6A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE39157F196D27E800DA1A6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE391580196D27E800DA1A6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE391595196D27E800DA1A6A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE391596196D27E800DA1A6A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE39159A196D27E800DA1A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE39159B196D27E800DA1A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE39159D196D27E800DA1A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChiquitoSounds/ChiquitoSounds-Prefix.pch";
+				INFOPLIST_FILE = "ChiquitoSounds/ChiquitoSounds-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE39159E196D27E800DA1A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChiquitoSounds/ChiquitoSounds-Prefix.pch";
+				INFOPLIST_FILE = "ChiquitoSounds/ChiquitoSounds-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FE3915A0196D27E800DA1A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ChiquitoSounds.app/ChiquitoSounds";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChiquitoSounds/ChiquitoSounds-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ChiquitoSoundsTests/ChiquitoSoundsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FE3915A1196D27E800DA1A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ChiquitoSounds.app/ChiquitoSounds";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChiquitoSounds/ChiquitoSounds-Prefix.pch";
+				INFOPLIST_FILE = "ChiquitoSoundsTests/ChiquitoSoundsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE391565196D27E800DA1A6A /* Build configuration list for PBXProject "ChiquitoSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE39159A196D27E800DA1A6A /* Debug */,
+				FE39159B196D27E800DA1A6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE39159C196D27E800DA1A6A /* Build configuration list for PBXNativeTarget "ChiquitoSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE39159D196D27E800DA1A6A /* Debug */,
+				FE39159E196D27E800DA1A6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE39159F196D27E800DA1A6A /* Build configuration list for PBXNativeTarget "ChiquitoSoundsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3915A0196D27E800DA1A6A /* Debug */,
+				FE3915A1196D27E800DA1A6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE391562196D27E800DA1A6A /* Project object */;
+}
