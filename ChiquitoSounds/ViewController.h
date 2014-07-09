@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
+#import <CoreMotion/CoreMotion.h>
 
 @interface ViewController : UIViewController
-
+@property (strong, nonatomic) CMMotionManager *motionManager;
 @end

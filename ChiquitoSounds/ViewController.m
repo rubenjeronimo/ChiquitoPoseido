@@ -31,8 +31,25 @@
     
     self.player.delegate =self;
     
+    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
+                                             withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+                                                 [self outputAccelertionData:accelerometerData.acceleration];
+                                                 if(error){
+                                                     
+                                                     NSLog(@"%@", error);
+                                                 }
+                                             }];
+
 	// Do any additional setup after loading the view, typically from a nib.
     
+}
+
+-(void)outputAccelertionData:(CMAcceleration)acceleration
+{
+    
+    if (acceleration.z>0.9 && acceleration.x<0.1 && acceleration.y<0.1) {
+        [self callaChiquito];
+    }
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
@@ -50,12 +67,9 @@
     if (!_images) {
         NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ImagenesChiquito" ofType:@"plist"];
         _images = [[NSArray alloc]initWithContentsOfFile:filePath];
-        
-        
     }
     return _images;
 }
-
 
 -(BOOL)canBecomeFirstResponder{
     return YES;
@@ -69,7 +83,6 @@
         self.imagenFondo.image = [UIImage imageNamed:imag];
     }
 }
-
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
