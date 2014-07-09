@@ -21,6 +21,14 @@
 		FE39158F196D27E800DA1A6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE391571196D27E800DA1A6A /* UIKit.framework */; };
 		FE391597196D27E800DA1A6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE391595196D27E800DA1A6A /* InfoPlist.strings */; };
 		FE391599196D27E800DA1A6A /* ChiquitoSoundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391598196D27E800DA1A6A /* ChiquitoSoundsTests.m */; };
+		FE3915A3196D288200DA1A6A /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE3915A2196D288200DA1A6A /* images.jpg */; };
+		FE3915A6196D2A4000DA1A6A /* Muelas.wav in Resources */ = {isa = PBXBuildFile; fileRef = FE3915A4196D2A4000DA1A6A /* Muelas.wav */; };
+		FE3915A7196D2A4000DA1A6A /* Trigo.wav in Resources */ = {isa = PBXBuildFile; fileRef = FE3915A5196D2A4000DA1A6A /* Trigo.wav */; };
+		FE3915A9196D31EA00DA1A6A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3915A8196D31EA00DA1A6A /* AVFoundation.framework */; };
+		FE3915AD196D4A6900DA1A6A /* 157089.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE3915AA196D4A6900DA1A6A /* 157089.jpg */; };
+		FE3915AE196D4A6900DA1A6A /* cunao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE3915AB196D4A6900DA1A6A /* cunao.mp3 */; };
+		FE3915AF196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */; };
+		FE3915B1196D4BDF00DA1A6A /* ImagenesChiquito.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE3915B0196D4BDF00DA1A6A /* ImagenesChiquito.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		FE391594196D27E800DA1A6A /* ChiquitoSoundsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChiquitoSoundsTests-Info.plist"; sourceTree = "<group>"; };
 		FE391596196D27E800DA1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE391598196D27E800DA1A6A /* ChiquitoSoundsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChiquitoSoundsTests.m; sourceTree = "<group>"; };
+		FE3915A2196D288200DA1A6A /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
+		FE3915A4196D2A4000DA1A6A /* Muelas.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Muelas.wav; sourceTree = "<group>"; };
+		FE3915A5196D2A4000DA1A6A /* Trigo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Trigo.wav; sourceTree = "<group>"; };
+		FE3915A8196D31EA00DA1A6A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FE3915AA196D4A6900DA1A6A /* 157089.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 157089.jpg; sourceTree = "<group>"; };
+		FE3915AB196D4A6900DA1A6A /* cunao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cunao.mp3; sourceTree = "<group>"; };
+		FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg"; sourceTree = "<group>"; };
+		FE3915B0196D4BDF00DA1A6A /* ImagenesChiquito.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagenesChiquito.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3915A9196D31EA00DA1A6A /* AVFoundation.framework in Frameworks */,
 				FE391570196D27E800DA1A6A /* CoreGraphics.framework in Frameworks */,
 				FE391572196D27E800DA1A6A /* UIKit.framework in Frameworks */,
 				FE39156E196D27E800DA1A6A /* Foundation.framework in Frameworks */,
@@ -101,6 +118,7 @@
 		FE39156C196D27E800DA1A6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE3915A8196D31EA00DA1A6A /* AVFoundation.framework */,
 				FE39156D196D27E800DA1A6A /* Foundation.framework */,
 				FE39156F196D27E800DA1A6A /* CoreGraphics.framework */,
 				FE391571196D27E800DA1A6A /* UIKit.framework */,
@@ -112,6 +130,12 @@
 		FE391573196D27E800DA1A6A /* ChiquitoSounds */ = {
 			isa = PBXGroup;
 			children = (
+				FE3915AA196D4A6900DA1A6A /* 157089.jpg */,
+				FE3915AB196D4A6900DA1A6A /* cunao.mp3 */,
+				FE3915AC196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg */,
+				FE3915A4196D2A4000DA1A6A /* Muelas.wav */,
+				FE3915A5196D2A4000DA1A6A /* Trigo.wav */,
+				FE3915A2196D288200DA1A6A /* images.jpg */,
 				FE39157C196D27E800DA1A6A /* AppDelegate.h */,
 				FE39157D196D27E800DA1A6A /* AppDelegate.m */,
 				FE39157F196D27E800DA1A6A /* Main.storyboard */,
@@ -119,6 +143,7 @@
 				FE391583196D27E800DA1A6A /* ViewController.m */,
 				FE391585196D27E800DA1A6A /* Images.xcassets */,
 				FE391574196D27E800DA1A6A /* Supporting Files */,
+				FE3915B0196D4BDF00DA1A6A /* ImagenesChiquito.plist */,
 			);
 			path = ChiquitoSounds;
 			sourceTree = "<group>";
@@ -228,9 +253,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3915A7196D2A4000DA1A6A /* Trigo.wav in Resources */,
+				FE3915B1196D4BDF00DA1A6A /* ImagenesChiquito.plist in Resources */,
 				FE391586196D27E800DA1A6A /* Images.xcassets in Resources */,
 				FE391578196D27E800DA1A6A /* InfoPlist.strings in Resources */,
+				FE3915AF196D4A6900DA1A6A /* ss-0-320-480-160-1-a7e34b6d6ca8332b300362f67344c8d43a2cace3.jpeg in Resources */,
+				FE3915AD196D4A6900DA1A6A /* 157089.jpg in Resources */,
 				FE391581196D27E800DA1A6A /* Main.storyboard in Resources */,
+				FE3915AE196D4A6900DA1A6A /* cunao.mp3 in Resources */,
+				FE3915A6196D2A4000DA1A6A /* Muelas.wav in Resources */,
+				FE3915A3196D288200DA1A6A /* images.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +488,7 @@
 				FE39159E196D27E800DA1A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE39159F196D27E800DA1A6A /* Build configuration list for PBXNativeTarget "ChiquitoSoundsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +497,7 @@
 				FE3915A1196D27E800DA1A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
