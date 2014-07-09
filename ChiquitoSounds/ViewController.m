@@ -9,10 +9,10 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolBox/AudioToolBox.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 
-
-@interface ViewController () <AVAudioPlayerDelegate>
+@interface ViewController () <AVAudioPlayerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (nonatomic,strong) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenFondo;
 @property (nonatomic, strong) AVAudioPlayer *player;
@@ -44,15 +44,91 @@
                                                      [self cantaChiquito];
                                                  }
                                              }];
+    
+        UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(useCameraRoll:)];
+        [left setDirection:UISwipeGestureRecognizerDirectionLeft];
+        [self.view addGestureRecognizer:left];
+        
+        UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(useCamera:)];
+        [right setDirection:UISwipeGestureRecognizerDirectionRight];
+        [self.view addGestureRecognizer:right];
     }
 	
+    
 }
 
 
+
+
+
+
+
+
+- (void) useCamera:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera])
+    {
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType =
+        UIImagePickerControllerSourceTypeCamera;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        [self presentViewController:imagePicker
+                           animated:YES completion:nil];
+//        _newMedia = YES;
+    }
+}
+//# Choose a photo from photoroll
+
+- (void) useCameraRoll:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType =
+        UIImagePickerControllerSourceTypePhotoLibrary;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        [self presentViewController:imagePicker
+                           animated:YES completion:nil];
+//        _newMedia = NO;
+    }
+}
+
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        UIImage *image = info[UIImagePickerControllerOriginalImage];
+        
+        _imagenFondo.image = image;
+   
+    }
+   
+}
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
     [self bombillaOFF];
 }
+
+
+
+
+
+
+
 
 -(void)apagar{
     UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(callaChiquito)];
